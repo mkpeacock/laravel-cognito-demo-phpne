@@ -45,10 +45,16 @@ return [
     ],
 
     's3' => [
-        'key' => env('S3_ACCESS_KEY_ID'),
-        'secret' => env('S3_SECRET_ACCESS_KEY'),
         'region' => env('S3_DEFAULT_REGION', 'us-east-1'),
         'bucket' => env('S3_BUCKET'),
+    ],
+
+    'cognito' => [
+        'identity_pool_id' => env('COGNITO_IDENTITY_POOL_ID'),
+        'developer_authentication_name' => env('COGNITO_DEVELOPER_AUTHENTICATION_NAME'),
+        'key' => env('COGNITO_ACCESS_KEY_ID'),
+        'secret' => env('COGNITO_SECRET_ACCESS_KEY'),
+        'region' => env('COGNITO_REGION', 'us-east-1'),
     ],
 
 ];
